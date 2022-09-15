@@ -1,5 +1,19 @@
+// #region
+// Engine
 import { createApp } from 'vue'
-import './style.css'
+
+// CSS
+import "./assets/css/reset.css"
+import './assets/css/style.css'
+
+// Root component
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// Router
+import router from "./router"
+// #endregion
+
+
+createApp(App)
+  .use(router)
+  .mount('#app')
