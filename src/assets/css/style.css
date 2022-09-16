@@ -47,6 +47,7 @@
   --white: #ccd6f6;
   --greyL: #a8b2d1;
   --grey: #8892b0;
+  --black2L: #233554;
   --blackL: #112240;
   --black: #0a192f;
   /* Shadow */
@@ -69,15 +70,12 @@ body {
 }
 /* Set selection color */
 ::-moz-selection { /* Code for Firefox */
-  background-color: var(--primary);
+  background-color: var(--black2L);
   color: var(--greyL);
 }
 ::selection {
-  background-color: var(--blackL);
-  color: var(--white);
-}
-a{
-  color: var(--primary)
+  background-color: var(--black2L);
+  color: var(--greyL);
 }
 /* #endregion */
 
