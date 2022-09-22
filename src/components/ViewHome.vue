@@ -2,6 +2,7 @@
 import HomeTopBar from './HomeTopBar.vue';
 import HomeSideNavigation from './HomeSideNavigation.vue';
 import HomeFooter from './HomeFooter.vue';
+import HomeHero from './HomeHero.vue';
 
 </script>
 
@@ -9,12 +10,33 @@ import HomeFooter from './HomeFooter.vue';
   <HomeTopBar />
   <HomeSideNavigation />
   <main>
+    <HomeHero />
   </main>
   <HomeFooter />
 </template>
 
 <style scoped>
-main{
+main {
   min-height: 100vh;
+  padding: 0 150px;
+}
+
+@media screen and (max-width: 1079px) {
+  /* Main padding from 150px to 100px */
+  main {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 0 25px;
+  }
 }
 </style>

@@ -77,5 +77,8 @@ body {
   background-color: var(--black2L);
   color: var(--greyL);
 }
+a {
+  color: var(--primary);
+}
 /* #endregion */
 
