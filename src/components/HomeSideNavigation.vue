@@ -1,20 +1,20 @@
 <script setup>
-
+import { links } from '../data';
 </script>
 
 <template>
   <!-- Left side navigation -->
   <aside class="left">
-    <a href="https://github.com/jiasuo" target="_blank" class="sm"><span class="icon"><img
-          src="../assets/img/github-i20.svg" alt="github" /></span></a><a href="https://fb.me/gabx91" target="_blank"
-      class="sm"><span class="icon"><img src="../assets/img/fb-i20.svg" alt="facebook" /></span></a><a
-      href="https://www.linkedin.com/in/acsjiasuo" target="_blank" class="sm"><span class="icon"><img
+    <a :href="`https://github.com/${links.github}`" target="_blank" class="sm"><span class="icon"><img
+          src="../assets/img/github-i20.svg" alt="github" /></span></a><a :href="`https://fb.me/${links.facebook}`"
+      target="_blank" class="sm"><span class="icon"><img src="../assets/img/fb-i20.svg" alt="facebook" /></span></a><a
+      :href="`https://www.linkedin.com/in/${links.linkedin}`" target="_blank" class="sm"><span class="icon"><img
           src="../assets/img/in-i20.svg" alt="linkedin" /></span></a>
   </aside>
 
   <!-- Right side navigation -->
   <aside class="right">
-    <a href="mailto:coucou@jiasuo.fr">coucou@jiasuo.fr</a>
+    <a :href="`mailto:${links.email}`">{{links.email}}</a>
   </aside>
 </template>
 
@@ -27,7 +27,7 @@ aside.right {
   position: fixed;
   bottom: 0px;
   z-index: 10;
-  color: #ccd6f6;
+  color: var(--white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +47,7 @@ aside.right::after {
   width: 1px;
   height: 90px;
   margin: 0px auto;
-  background-color: #8892b0;
+  background-color: var(--grey);
 }
 
 /* Left */
@@ -83,7 +83,34 @@ aside.right a {
   writing-mode: vertical-rl;
   font-family: "SF Mono", arial;
   font-size: 12px;
-  color: #8892b0;
+  color: var(--grey);
+}
+
+/* #endregion */
+
+/* #region Medium screen < 1080px */
+@media screen and (max-width: 1079px) {
+
+  /* Side padding from 40px to 20px */
+  aside.left {
+    left: 20px;
+  }
+
+  aside.right {
+    right: 20px;
+  }
+}
+
+/* #endregion */
+
+/* #region Small screen <= 768px */
+@media screen and (max-width: 768px) {
+
+  /* Hide left & right sides */
+  aside.left,
+  aside.right {
+    display: none;
+  }
 }
 
 /* #endregion */
