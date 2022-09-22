@@ -2,7 +2,11 @@
 import HomeTopBar from './HomeTopBar.vue';
 import HomeSideNavigation from './HomeSideNavigation.vue';
 import HomeFooter from './HomeFooter.vue';
-import HomeHero from './HomeHero.vue';
+import HomeSectionHero from './HomeSectionHero.vue';
+import HomeSectionAbout from './HomeSectionAbout.vue';
+import HomeSectionPortfolio from './HomeSectionPortfolio.vue';
+import HomeSectionOtherprojects from './HomeSectionOtherprojects.vue';
+import HomeSectionContact from './HomeSectionContact.vue';
 
 </script>
 
@@ -10,7 +14,11 @@ import HomeHero from './HomeHero.vue';
   <HomeTopBar />
   <HomeSideNavigation />
   <main>
-    <HomeHero />
+    <HomeSectionHero />
+    <HomeSectionAbout />
+    <HomeSectionPortfolio />
+    <HomeSectionOtherprojects />
+    <HomeSectionContact />
   </main>
   <HomeFooter />
 </template>

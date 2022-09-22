@@ -4,3 +4,12 @@ export const links = {
   linkedin: "jackio",
   email: "coucou@jiasuo.fr"
 }
+
+export const skills = [
+  "JavaScript (ES6+)",
+  "Vue.js",
+  "Node.js",
+  "TypeScript",
+  "Python",
+  "Linux"
+]
