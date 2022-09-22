@@ -145,6 +145,7 @@ section.portfolio>.content>.project:not(:last-child) {
 /* Project contents */
 section.portfolio .projectcontent {
   position: relative;
+  grid-column: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-area: 1 / 1 / -1 / 7;
