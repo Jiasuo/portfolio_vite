@@ -7,20 +7,31 @@ import HomeSectionAbout from './HomeSectionAbout.vue';
 import HomeSectionPortfolio from './HomeSectionPortfolio.vue';
 import HomeSectionOtherprojects from './HomeSectionOtherprojects.vue';
 import HomeSectionContact from './HomeSectionContact.vue';
+import { ref } from 'vue';
+import HomeLoader from './HomeLoader.vue';
+
+const loaded = ref(false)
+
+function handleAvatarLoaded(){
+  console.log('Avatar loaded');
+}
 
 </script>
 
 <template>
-  <HomeTopBar />
-  <HomeSideNavigation />
-  <main>
-    <HomeSectionHero />
-    <HomeSectionAbout />
-    <HomeSectionPortfolio />
-    <HomeSectionOtherprojects />
-    <HomeSectionContact />
-  </main>
-  <HomeFooter />
+  <HomeLoader v-show="!loaded" />
+  <div class="globalContainer" v-show="loaded">
+    <HomeTopBar />
+    <HomeSideNavigation />
+    <main>
+      <HomeSectionHero />
+      <HomeSectionAbout @imageLoaded="handleAvatarLoaded"/>
+      <HomeSectionPortfolio />
+      <HomeSectionOtherprojects />
+      <HomeSectionContact />
+    </main>
+    <HomeFooter />
+  </div>
 </template>
 
 <style scoped>

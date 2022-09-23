@@ -1,6 +1,9 @@
 <script setup>
 import HomeSectionHeading from './HomeSectionHeading.vue';
 import { skills } from '../data';
+
+defineEmits(["imageLoaded"])
+
 </script>
 
 <template>
@@ -36,7 +39,7 @@ import { skills } from '../data';
       <div class="right">
         <div class="imagewrapper">
           <div class="pic">
-            <img src="../assets/img/jj.png" alt="jiasuo picture" />
+            <img src="../assets/img/jj_optimized.png" alt="jiasuo picture" @load="$emit('imageLoaded')" />
           </div>
         </div>
       </div>

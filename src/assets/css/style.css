@@ -3,21 +3,25 @@
 @font-face {
   font-family: "SF Mono";
   src: url("../fonts/sf_mono_regular.ttf");
+  font-display: auto;
 }
 /* Calibre Regular */
 @font-face {
   font-family: "Calibre Regular";
   src: url("../fonts/CalibreRegular.otf");
+  font-display: auto;
 }
 /* Calibre SemiBold */
 @font-face {
   font-family: "Calibre SemiBold";
   src: url("../fonts/CalibreSemibold.otf");
+  font-display: auto;
 }
 /* Calibre Bold */
 @font-face {
   font-family: "Calibre Bold";
   src: url("../fonts/CalibreBold.otf");
+  font-display: auto;
 }
 /* #endregion */
 
